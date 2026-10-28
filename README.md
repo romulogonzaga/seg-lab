@@ -34,4 +34,8 @@ node verify-audio.cjs
 - `dist/assets/`: mapa e ilustrações.
 - `LEIA-ME.md`: instruções detalhadas e notas sobre referências.
 
-Este repositório armazena o projeto; não configura publicação automática ou GitHub Pages.
+## Publicação
+
+O jogo é publicado no GitHub Pages em https://romulogonzaga.github.io/seg-lab/.
+
+O workflow `.github/workflows/pages.yml` publica o conteúdo de `dist/` a cada atualização da branch `main`. Também pode ser iniciado manualmente na aba Actions. Não há etapa de compilação.
