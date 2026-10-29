@@ -2,7 +2,7 @@
 
 Jogo educativo de identificação de riscos, executado inteiramente no navegador.
 
-- Sete cenários e 25 riscos clicáveis.
+- Sete cenários e 42 riscos clicáveis.
 - Mapa ilustrado com HUD e opção de tela cheia.
 - Fichas de prevenção com referências oficiais.
 - Dicas em dois níveis: pista textual e marcação visual temporária.
