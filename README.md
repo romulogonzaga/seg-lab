@@ -8,7 +8,7 @@ Jogo educativo de identificação de riscos, executado inteiramente no navegador
 - Dicas em dois níveis: pista textual e marcação visual temporária.
 - Progresso salvo no navegador e reinício para um novo jogador.
 - Abertura com o crédito “vibe coded by rômulo gonzaga”.
-- Sons ambientes sintetizados por setor, efeitos de acerto/dica e controle de som no HUD.
+- Gravações de sons por setor, efeitos de acerto/dica e controle de som no HUD.
 - Sem dependências, cadastro ou servidor de aplicação.
 
 ## Jogar localmente
@@ -31,6 +31,7 @@ node verify-audio.cjs
 - `dist/app.js`: interface e regras.
 - `dist/style.css` e `dist/game.css`: estilos e HUD responsivo.
 - `dist/audio.js` e `dist/intro.css`: introdução e áudio local, iniciado apenas por escolha do jogador.
+- `dist/assets/audio/`: oito gravações CC0 de Joseph SARDIN / BigSoundBank, com fontes em `CREDITOS.md`.
 - `dist/assets/`: mapa e ilustrações.
 - `LEIA-ME.md`: instruções detalhadas e notas sobre referências.
 

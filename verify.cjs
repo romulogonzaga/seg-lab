@@ -19,6 +19,14 @@ assert.equal(run('hintLevel'),1);assert.equal(run('revealId'),null);assert.equal
 run(`requestHint()`);assert.equal(run('hintLevel'),2);assert.equal(run('revealId'),'ferramentas');assert.equal(run('found(current).length'),0);
 run(`inspect(hintTarget.area[0],hintTarget.area[1])`);assert.equal(run('found(current).length'),1);assert.equal(run('revealId'),null);assert.equal(run('hintLevel'),0);
 run(`requestHint()`);assert.equal(run('hintTarget.id'),'oleo');assert.equal(run('hintLevel'),1);
+assert.equal(run('selectedRisk'),null,'Uma dica não mantém aberta a ficha do acerto anterior');
+assert(!run(`document.querySelector('#sceneSide').innerHTML.includes('risk-dossier')`));
+run(`hintTarget=current.risks[0];revealId=hintTarget.id;hintLevel=2;requestHint()`);
+assert.equal(run('hintTarget.id'),'oleo','Alvo encontrado precisa ser substituído');assert.equal(run('revealId'),null);assert.equal(run('hintLevel'),1);
+run('requestHint()');assert.equal(run('revealId'),'oleo');assert(!run('found(current).includes(revealId)'));
+run(`for(const r of current.risks){if(!found(current).includes(r.id))inspect(r.area[0],r.area[1])}hintTarget=current.risks[0];revealId=hintTarget.id;requestHint()`);
+assert.equal(run('hintTarget'),null);assert.equal(run('revealId'),null);assert.equal(run('hintText'),'');
+assert(!run(`document.querySelector('#marks').innerHTML.includes('hint-target')`));
 stored['seglab-cidade-v1']='not json';assert.equal(run(`Object.values(loadProgress()).flat().length`),0);
 stored['seglab-cidade-v1']=JSON.stringify({oficina:['oleo','oleo','invalid']});assert.equal(run(`loadProgress().oficina.length`),1);
 console.log('PASS: 7 cenários, 42 hotspots, acertos duplicados, conclusão, persistência, reset, riscos próximos, zoom, recuperação de dados e dicas em dois níveis sem acerto automático.');
