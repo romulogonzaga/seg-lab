@@ -2,6 +2,14 @@
 
 Jogo educativo de identificação de riscos, executado inteiramente no navegador.
 
+**[Jogar no navegador](https://romulogonzaga.github.io/seg-lab/)**
+
+## Objetivo
+
+Apoiar atividades de educação para a prevenção por meio da exploração de cenários e da identificação de situações de risco.
+
+## Funcionalidades
+
 - Sete cenários e 42 riscos clicáveis.
 - Mapa ilustrado com HUD e opção de tela cheia.
 - Fichas de prevenção com referências oficiais.
